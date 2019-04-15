@@ -11,23 +11,17 @@ A new image restoration approach is proposed for the video sequence distorted by
 ![Flow Chart](https://t1.picb.cc/uploads/2019/04/04/VFYbdd.png)
 
 ## Runing Detail
-1. Prepare the development environment of MATLAB
-2. Download the document containing code and datasets.
-3. Unzip the document that you downloaded just now.
-4. Then unzip two package documents in root directory ,which are named datasets and Registration,respectively.
-5. Add all documents in root directory into current directory of MATLAB.
-6. There are three kinds of images in the directory named datasets,then load any one of them into workspace of MATLAB.
-7. Run script named main,then wait a few minutes.
-8. All Results are located in the root directory.
+1. Unzip all documents.
+2. Add all documents  into current directory of MATLAB.
+3. Run the script named main,then wait a few minutes.
+4. All Results are located in the directory named results.
 
 
 ## Comments
+  
+1.The data sets can be obtained from [here](http://www.cs.cmu.edu/~ILIM/projects/IM/water/research_water.html).
 
-1.Before running  main.m, the patch size of each data set should be manually set.The recommended patch size can be found in the paper.
-   
-2.The data sets can be obtained from [here](http://www.cs.cmu.edu/~ILIM/projects/IM/water/research_water.html).
-
-3.Our code does not contain the part of post-processing,which can be found from [here](http://perception.csl.illinois.edu/matrix-rank/sample_code.html).
+2.Our code does not contain the part of post-processing,which can be found from [here](http://perception.csl.illinois.edu/matrix-rank/sample_code.html).
 
 ## Author
 zhen zhang and Xu Yang at School of Mechatronic Engineering and Automation, Shanghai University,Shanghai, China
