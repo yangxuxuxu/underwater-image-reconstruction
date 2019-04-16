@@ -1,4 +1,4 @@
-function meanframe=registration(frames,Istatic)
+function frames=registration(frames,Istatic,indexLoops)
 % INPUT:
 %         frames！！a*b*n matrix,a is picture hight,b is picture width,and n is the number of pictures.
 %         Istatic！！The result of blind_deconvolution in current iteration,and it's a*b matrix.a is picture hight,b is picture width.
@@ -6,7 +6,6 @@ function meanframe=registration(frames,Istatic)
 %         meanframe！！a*b*n matrix,a is picture hight,b is picture width,and n is the number of pictures.It's a new image sequence that has less distortion than before. 
 global Options;
 global regPATH;
-global indexLoops;
 
 for indexImages=1:size(frames,3) 
         Imoving=frames(:,:,indexImages);      

@@ -11,16 +11,19 @@ close all;
 
 %% iteration variable set
 global maxIterLoop;
-global indexLoops;
-maxIterLoop=5; 
+maxIterLoop=10; 
+
 
 %% iteration recovery
 viariable_init();
+
 frames=input_load();
  for indexLoops=1:maxIterLoop
-   frame_combine=patch_fuse(frames);
-   [DeconvMean,Istatic]=blind_deconv(frame_combine);
-   meanframe=registration(frames,Istatic);
+   frame_combine=patch_fuse(frames,indexLoops);
+   Istatic=blind_deconv(frame_combine);
+   frames=registration(frames,Istatic,indexLoops);
+   DeconvMean(:,:,indexLoops)=Istatic;
+   meanframe(:,:,indexLoops)=mean(frames,3);
  end
  output_save(DeconvMean,meanframe);
 

@@ -1,4 +1,4 @@
-function frame_combine=patch_fuse(frames)
+function frame_combine=patch_fuse(frames,indexLoops)
 % INPUT:
 %         frames¡ª¡ªa*b*n matrix,a is picture hight,b is picture width,and n is the number of pictures.
 % OUTPUT:
@@ -9,10 +9,8 @@ global patch_height;
 global patch_width;
 global patch_h;
 global patch_w;
-global frames_patches;
-global Istatic_patches;
 global regPATH;
-global indexLoops;
+
 	frames_patches = cell(patch_h,patch_w);
      for i = 1:patch_h 
          for j = 1:patch_w 
